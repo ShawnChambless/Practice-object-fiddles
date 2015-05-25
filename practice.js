@@ -299,10 +299,10 @@ var MakeCard = function(type, number, ccv, exp) {
 */
 
   //Code Here
-var bindCard = function(person, card) {
+var bindCard = function(person, creditcard) {
     return newObject = {
         person: person,
-        card: card
+        creditcard: creditcard
     }
 }
 
