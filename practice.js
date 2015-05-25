@@ -271,7 +271,6 @@ var MakePerson = function(name, birthday, ssn) {
     }
 };
 
-MakePerson('Shawn', 'April 20', 'No thanks');
 
 //NEXT PROBLEM
 
@@ -290,8 +289,6 @@ var MakeCard = function(type, number, ccv, exp) {
     }
 }
 
-MakeCard('Visa', 3, 456, '10/16');
-
 //NEXT PROBLEM
 
 
@@ -309,4 +306,4 @@ var bindCard = function(person, card) {
     }
 }
 
-bindCard(MakePerson, MakeCard);
+bindCard(MakePerson('Shawn', 'April 20', 'No thanks'), MakeCard('Visa', 3, 456, '10/16'));
