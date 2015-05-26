@@ -289,6 +289,9 @@ var MakeCard = function(type, number, ccv, exp) {
     }
 }
 
+MakePerson('Shawn', 'April 20', '5');
+MakeCard('Visa', '4', '5', '6');
+
 //NEXT PROBLEM
 
 
@@ -300,10 +303,16 @@ var MakeCard = function(type, number, ccv, exp) {
 
   //Code Here
 var bindCard = function(person, creditcard) {
-    return newObject = {
-        person: person,
-        creditcard: creditcard
+    return {
+        name: person['name'],
+        birthday: person['birthday'],
+        ssn: person['ssn'],
+        type: creditcard['type'],
+        number: creditcard['number'],
+        ccv: creditcard['ccv'],
+        exp: creditcard['exp']
     }
+    return bindCard;
 }
 
-bindCard(MakePerson('Shawn', 'April 20', 'No thanks'), MakeCard('Visa', 3, 456, '10/16'));
+bindCard(MakePerson, MakeCard);
